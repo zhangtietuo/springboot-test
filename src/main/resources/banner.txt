@@ -1,0 +1,6 @@
+${AnsiColor.BRIGHT_RED} _   _ _____ _   _
+${AnsiColor.BRIGHT_RED}| | | |_   _| | | |
+${AnsiColor.BRIGHT_RED}| |_| | | | | |_| |
+${AnsiColor.BRIGHT_RED}|  _  | | | |  _  |
+${AnsiColor.BRIGHT_RED}|_| |_| |_| |_| |_|
+${AnsiColor.BRIGHT_BLUE}       ${application.title} ${application.formatted-version}

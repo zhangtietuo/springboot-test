@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration>
+<configuration scan="true" packagingData="true" debug="false">
+
+    <springProperty name="logDir" source="log.dir" defaultValue="${HOME}/logs/htouhui_web_api"/>
+    <springProperty name="logLevel" source="log.level" defaultValue="DEBUG"/>
+
+    <!-- 控制台 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%yellow(%d{yyyy-MM-dd HH:mm:ss.SSS}) %green([%thread]) %highlight(%-5level) %cyan(%logger{36}) - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- FaceId Appender -->
+    <appender name="WEBAPI-APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logDir}/3rd_webapi.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>60</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}|%msg%n</pattern>
+        </encoder>
+    </appender>
+    <!-- TongDun Appender -->
+    <appender name="TD-APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logDir}/3rd_td.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>60</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}|%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--FaceId Logger -->
+    <logger name="webapi-logger" level="${logLevel}" addtivity="false">
+        <appender-ref ref="WEBAPI-APPENDER"/>
+    </logger>
+
+    <!--TongDun Logger -->
+    <logger name="td-logger" level="${logLevel}" addtivity="false">
+        <appender-ref ref="TD-APPENDER"/>
+    </logger>
+
+    <!-- 默认使用INFO，防止日志过多。如果有特别的package需要debug级别，使用logger进行单独设置 -->
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>
