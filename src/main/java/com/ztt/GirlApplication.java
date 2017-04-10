@@ -12,7 +12,7 @@ public class GirlApplication {
 	public static void main(String[] args) {
 		SpringApplication app = new SpringApplication(GirlApplication.class);
 		app.setWebEnvironment(true);
-		//app.setShowBanner(false);
+		//app.setShowBanner(false);阿萨德
 
 		Set<Object> set = new HashSet<Object>();
 		//set.add("classpath:application-dev.yaml");
