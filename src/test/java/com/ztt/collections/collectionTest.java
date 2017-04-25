@@ -30,16 +30,20 @@ public class collectionTest {
         List<UserProjectPlan> list = new ArrayList<UserProjectPlan>();
         UserProjectPlan u = null;
         u = new UserProjectPlan();
-        u.setLockEndTime(sdf.parse("2017-04-25"));
+        u.setLockEndTime(sdf.parse("2017-04-26"));
         u.setApplyEndMoney(100d);
         list.add(u);
         u = new UserProjectPlan();
-        u.setLockEndTime(sdf.parse("2017-04-27"));
+        u.setLockEndTime(sdf.parse("2017-04-25"));
         u.setApplyEndMoney(200d);
         list.add(u);
         u = new UserProjectPlan();
         u.setLockEndTime(sdf.parse("2017-04-27"));
         u.setApplyEndMoney(100d);
+        list.add(u);
+        u = new UserProjectPlan();
+        u.setLockEndTime(sdf.parse("2017-04-26"));
+        u.setApplyEndMoney(50d);
         list.add(u);
         Collections.sort(list, new Comparator<UserProjectPlan>() {
             @Override
