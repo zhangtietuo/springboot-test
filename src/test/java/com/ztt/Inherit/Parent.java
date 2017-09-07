@@ -1,4 +1,4 @@
-package com.ztt.collections;
+package com.ztt.Inherit;
 
 /**
  * 如果这段代码好用，那它是tietuo.zhang写的
