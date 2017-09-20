@@ -1,7 +1,7 @@
 启动springboot方式：
   1.通过内嵌tomcat启动
   2.在命令行中输入：mvn spring-boot:run
-  3.(1)mvn install (2)进入项目target目录 (3) java -jar ***-SNAPSHOT-jar 或者 java -jar ***-SNAPSHOT-jar --spring.profiles.active = dev
+  3.(1)mvn install (2)进入项目target目录 (3) java -jar ***-SNAPSHOT-jar 或者 java -jar ***-SNAPSHOT-jar --spring.profiles.active=dev --server.port=8888
   *** 一个项目可以在不同端口同时打开！！！
 
 注解：

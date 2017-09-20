@@ -8,4 +8,4 @@ content: "年龄${manAge},尺寸${manSize}"
 
 girl:
   cupSize: F
-  age: 23
+  age: ${random.int[20,30]}
