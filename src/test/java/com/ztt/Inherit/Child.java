@@ -29,8 +29,8 @@ public class Child extends Parent{
         System.out.println("C eat!");
     }
 
-    public static void main(String[] args) {
-        new Child();
+    public static void main(String[] args) throws Throwable {
+        Child d = new Child();
         System.out.println("-------------------------");
         Parent c = new Child();
         c.eat();
