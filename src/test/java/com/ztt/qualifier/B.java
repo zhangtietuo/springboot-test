@@ -27,11 +27,11 @@ public class B extends A {
 
     public void test() {
         A objectA = new A();
-        String a = objectA.a;
+        //String a = objectA.a;
         String b = objectA.b;
         String c = objectA.c;
         String d = objectA.d;
-        objectA.a();
+        //objectA.a();
         objectA.b();
         objectA.c();
         objectA.d();

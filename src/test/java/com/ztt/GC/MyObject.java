@@ -1,4 +1,4 @@
-package com.ztt;
+package com.ztt.GC;
 
 public class MyObject{
 
@@ -12,9 +12,7 @@ public class MyObject{
 
     }
 
-    protected void finalize()
-
-    {
+    protected void finalize() {
 
         main.ref=this;// 恢复本对象，让本对象可达
 
