@@ -7,4 +7,11 @@ spring:
       username: root
       password: root
       driver-class-name: com.mysql.jdbc.Driver
+management: #配置默认查看系统信息不使用身份验证
+  security:
+    enabled: false
+endpoints: #http://localhost:8080/myProject/shutdown 会自动关闭系统
+  shutdown:
+    enabled: true
+
 

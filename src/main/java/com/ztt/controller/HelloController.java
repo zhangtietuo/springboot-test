@@ -3,6 +3,7 @@ package com.ztt.controller;
 import com.ztt.entity.Girl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.actuate.metrics.CounterService;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -27,6 +28,9 @@ public class HelloController {
     @Autowired
     private Girl girl;
 
+    @Autowired
+    CounterService counterService;
+
     /**
      * http://localhost:8081/myProject/hi  or http://localhost:8081/myProject/helloMan/123
      * @param manId
@@ -46,4 +50,15 @@ public class HelloController {
     public String helloGirl(@RequestParam(value = "id" , required = false , defaultValue = "100") Integer girlId){
         return "罩杯：" + girl.getCupSize() + ",年龄：" + girl.getAge() + " " + girlId;
     }
+
+    /**
+     * http://localhost:8080/myProject/metrics
+     * @return
+     */
+    @RequestMapping("/hello")
+    public String greet() {
+        counterService.increment("didispace.hello.count");
+        return "";
+    }
+
 }
