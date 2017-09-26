@@ -2,10 +2,12 @@ package com.ztt;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@EnableDiscoveryClient
 @SpringBootApplication
 public class GirlApplication {
 

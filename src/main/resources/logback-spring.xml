@@ -2,7 +2,7 @@
 <!DOCTYPE configuration>
 <configuration scan="true" packagingData="true" debug="false">
 
-    <springProperty name="logDir" source="log.dir" defaultValue="${HOME}/logs/htouhui_web_api"/>
+    <springProperty name="logDir" source="log.dir" defaultValue="${HOME}/logs/girl"/>
     <springProperty name="logLevel" source="log.level" defaultValue="DEBUG"/>
 
     <!-- 控制台 -->
@@ -16,7 +16,7 @@
     <appender name="WEBAPI-APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <append>true</append>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${logDir}/3rd_webapi.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${logDir}/3rd_girl.%d{yyyy-MM-dd}.log</fileNamePattern>
             <maxHistory>60</maxHistory>
         </rollingPolicy>
         <encoder>
